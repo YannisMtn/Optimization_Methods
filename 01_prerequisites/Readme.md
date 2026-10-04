@@ -58,7 +58,7 @@ The result of this top down approach is handwritten in the pdf named "Top_Down",
 
 ## Block 5 — Multivariable differential calculus
 
-- [ ] Multivariable differentiability, classes C¹ and C²
+- [ ] Multivariable differentiability, classes C⁰, C¹ and C² in several variables
 - [ ] The gradient as a linear map
 - [ ] The Hessian as the matrix of second derivatives, and the quadratic form associated with it
 - [ ] Multivariable Taylor expansion, remainder and local approximation
@@ -76,6 +76,7 @@ The result of this top down approach is handwritten in the pdf named "Top_Down",
 
 - [ ] Critical points (∇f(x) = 0)
 - [ ] First- and second-order optimality conditions
+- [ ] Existence and uniqueness of a minimizer
 - [ ] Convexity as a guarantee of global optimality
 - [ ] One equality constraint: local constraint manifold, feasible directions
 - [ ] Lagrange multiplier, second-order conditions under constraint
@@ -99,7 +100,8 @@ The result of this top down approach is handwritten in the pdf named "Top_Down",
 - [ ] Convergence of iterative algorithms, descent directions
 - [ ] Step size selection: line search, backtracking
 - [ ] Gradient descent: convergence when f is convex with a Lipschitz gradient, the non-smooth case
-- [ ] Newton's method: second-order Taylor expansion, invertible Hessian, local convexity, fast local convergence, backtracking and robustness
+- [ ] Newton's method: second-order Taylor expansion, invertible Hessian, local convexity and positive definite Hessian, fast local convergence, backtracking and robustness
+- [ ] Local vs global convergence, including for methods using Lagrange multipliers
 - [ ] Numerical solvers (Excel Solver):
   - tolerance, convergence, precision
   - local vs global solutions
@@ -115,6 +117,7 @@ The result of this top down approach is handwritten in the pdf named "Top_Down",
 - [ ] Portfolio selection as a linear program, portfolio constraints
 - [ ] Quadratic optimization under linear constraints: minimizing portfolio variance subject to a target expected return
 - [ ] Mean-variance portfolio and the convexity of the problem
+- [ ] Link between convexity and optimality conditions in the mean-variance problem
 - [ ] Sensitivity to estimated parameters
 - [ ] Financial interpretation of risk and return
 
@@ -131,3 +134,30 @@ The result of this top down approach is handwritten in the pdf named "Top_Down",
   - approximation guarantees
 
 ---
+
+## Traceability to the course chapters
+
+The blocks reorganize the whiteboard items by dependency. This table maps every item from course parts II, III and IV to the blocks that cover its prerequisites.
+
+| # | Course item | Part | Blocks |
+|:-:|-------------|:----:|:------:|
+| 1 | ℝⁿ and matrix calculus | II | 1 |
+| 2 | Infinity and infinity | II | 0 |
+| 3 | Metric spaces | II | 3, 4 |
+| 4 | Topology | II | 4 |
+| 5 | Convex sets | II | 1, 6 |
+| 6 | Convex functions | II | 2, 3, 6 |
+| 7 | Linear programming | III | 1, 6, 8 |
+| 8 | Excel Solver | III | 9 |
+| 9 | Portfolio selection (LP) | III | 3, 10 |
+| 10 | Combinatorial optimization | III | 0, 11 |
+| 11 | Gradient and Newton methods | IV | 5, 9 |
+| 12 | Smoothness and Taylor expansion | IV | 2, 5 |
+| 13 | Gradient and Hessian | IV | 3, 5, 7 |
+| 14 | Unconstrained optimization | IV | 6, 7 |
+| 15 | Descent method | IV | 2, 9 |
+| 16 | Newton's method | IV | 5, 9 |
+| 17 | One equality constraint (Lagrangian) | IV | 7 |
+| 18 | Mean-variance portfolio | IV | 3, 6, 10 |
+
+Part IV marks the shift from a world where solutions are geometric and finite (LP, simplex, combinatorics) to one built on differentiable functions, local approximations, optimality conditions, iterative methods and nonlinear financial models.
